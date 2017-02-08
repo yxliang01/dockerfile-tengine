@@ -1,8 +1,8 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
-MAINTAINER Erik Osterman <e@osterman.com>
+MAINTAINER Erik Osterman <e@osterman.com>, Xiao Liang Yu <13267.okk@gmail.com>
 
-ENV NGINX_VERSION tengine-2.1.0
+ENV NGINX_VERSION tengine-2.2.0
 
 ENV   DEBIAN_FRONTEND noninteractive
 ENV   LANGUAGE en_US.UTF-8
