@@ -134,6 +134,7 @@ ADD html/ /etc/nginx/html/
 
 VOLUME ["/var/log/nginx"]
 VOLUME ["/var/cache/nginx"]
+VOLUME ["/etc/nginx/conf.d"]
 
 WORKDIR /etc/nginx
 
