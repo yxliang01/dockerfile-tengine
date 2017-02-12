@@ -44,7 +44,7 @@ RUN apt-get update && \
                        libgd2-xpm-dev \
                        libgeoip-dev \
                        libxslt1-dev \
-                       libpcre++0 \
+                       libpcre++0v5 \
                        libpcre++-dev \
                        libperl-dev \
                        wget \
@@ -75,7 +75,6 @@ RUN apt-get update && \
         --with-http_addition_module \
         --with-http_dav_module \
         --with-http_realip_module \
-        --with-http_spdy_module \
         --with-http_ssl_module \
         --with-http_stub_status_module \
         --with-http_sub_module \
