@@ -48,8 +48,9 @@ RUN apt-get update && \
                        libpcre++-dev \
                        libperl-dev \
                        wget \
-                       curl && \
-    tar -zxvf tengine.tar.gz && \
+                       curl
+                       
+RUN tar -zxvf tengine.tar.gz && \
     cd tengine-${NGINX_VERSION} && \
     ./configure \
         --enable-mods-static=all \
@@ -130,10 +131,7 @@ ADD nginx.conf /etc/nginx/nginx.conf
 
 ADD html/ /etc/nginx/html/
 
-
-VOLUME ["/var/log/nginx"]
-VOLUME ["/var/cache/nginx"]
-VOLUME ["/etc/nginx/sites-enabled"]
+VOLUME ["/var/log/nginx", "/var/cache/nginx", "/etc/nginx/sites-enabled"]
 
 WORKDIR /etc/nginx
 
